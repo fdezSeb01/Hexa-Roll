@@ -1,0 +1,150 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://Scenes/Balls.gd" type="Script" id=1]
+[ext_resource path="res://Assets/pinkBall.png" type="Texture" id=2]
+[ext_resource path="res://Assets/redBall.png" type="Texture" id=3]
+[ext_resource path="res://Assets/orangeBall.png" type="Texture" id=4]
+[ext_resource path="res://Assets/blueBall.png" type="Texture" id=5]
+[ext_resource path="res://Assets/yellowBall.png" type="Texture" id=6]
+[ext_resource path="res://Assets/greenBall.png" type="Texture" id=7]
+[ext_resource path="res://Assets/mouth_smile_PNG27.png" type="Texture" id=8]
+[ext_resource path="res://Assets/PinClipart.com_angry-eye-clip-art_3276935.png" type="Texture" id=9]
+[ext_resource path="res://Assets/PinClipart.com_yoda-clip-art_601544.png" type="Texture" id=10]
+[ext_resource path="res://Assets/teddy.png" type="Texture" id=11]
+[ext_resource path="res://Assets/sadFace.png" type="Texture" id=12]
+[ext_resource path="res://Assets/duck.png" type="Texture" id=13]
+[ext_resource path="res://Assets/astro.png" type="Texture" id=14]
+[ext_resource path="res://Assets/eye.png" type="Texture" id=15]
+[ext_resource path="res://Assets/turtle.png" type="Texture" id=16]
+[ext_resource path="res://Assets/spiral.png" type="Texture" id=17]
+[ext_resource path="res://Assets/spiralwow.png" type="Texture" id=18]
+[ext_resource path="res://Assets/toad.png" type="Texture" id=19]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "Red",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "Pink",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "Yellow",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "Blue",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "Brown",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "Green",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 2 ), ExtResource( 7 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "ToadPower",
+"speed": 5.0
+} ]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 392.041
+
+[node name="Balls" type="RigidBody2D" groups=[
+"Balls",
+]]
+position = Vector2( 395.627, 448.039 )
+collision_layer = 0
+collision_mask = 0
+gravity_scale = 0.0
+linear_damp = 0.0
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.062, 0.062 )
+frames = SubResource( 1 )
+animation = "Blue"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+scale = Vector2( 0.062, 0.062 )
+shape = SubResource( 2 )
+
+[node name="ToadPower" type="Sprite" parent="."]
+visible = false
+modulate = Color( 0, 0, 0, 1 )
+scale = Vector2( 0.18, 0.18 )
+texture = ExtResource( 19 )
+
+[node name="Skinss" type="Sprite" parent="."]
+
+[node name="Smile" type="Sprite" parent="Skinss"]
+visible = false
+position = Vector2( -3.05176e-05, 2.19458 )
+scale = Vector2( 0.275336, 0.331223 )
+texture = ExtResource( 8 )
+
+[node name="Sad" type="Sprite" parent="Skinss"]
+visible = false
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 12 )
+
+[node name="Astro" type="Sprite" parent="Skinss"]
+visible = false
+scale = Vector2( 0.055, 0.055 )
+texture = ExtResource( 14 )
+
+[node name="Duck" type="Sprite" parent="Skinss"]
+visible = false
+modulate = Color( 0, 0, 0, 1 )
+scale = Vector2( 0.04, 0.04 )
+texture = ExtResource( 13 )
+
+[node name="Eye" type="Sprite" parent="Skinss"]
+visible = false
+scale = Vector2( 0.08, 0.08 )
+texture = ExtResource( 15 )
+
+[node name="Angry" type="Sprite" parent="Skinss"]
+visible = false
+position = Vector2( 0, -4 )
+scale = Vector2( 0.045, 0.045 )
+texture = ExtResource( 9 )
+
+[node name="Fackaf" type="Sprite" parent="Skinss"]
+visible = false
+scale = Vector2( 0.055, 0.055 )
+texture = ExtResource( 10 )
+
+[node name="Spiral" type="Sprite" parent="Skinss"]
+visible = false
+position = Vector2( 1, 0 )
+scale = Vector2( 0.027, 0.027 )
+texture = ExtResource( 17 )
+
+[node name="Spiralwow" type="Sprite" parent="Skinss"]
+visible = false
+scale = Vector2( 0.06, 0.06 )
+texture = ExtResource( 18 )
+
+[node name="Teddy" type="Sprite" parent="Skinss"]
+visible = false
+scale = Vector2( 0.085, 0.085 )
+texture = ExtResource( 11 )
+
+[node name="Turtle" type="Sprite" parent="Skinss"]
+visible = false
+modulate = Color( 0, 0, 0, 1 )
+scale = Vector2( 0.07, 0.07 )
+texture = ExtResource( 16 )

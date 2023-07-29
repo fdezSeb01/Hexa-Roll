@@ -1,0 +1,637 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Assets/redBall.png" type="Texture" id=1]
+[ext_resource path="res://Assets/mouth_smile_PNG27.png" type="Texture" id=2]
+[ext_resource path="res://Assets/duck.png" type="Texture" id=3]
+[ext_resource path="res://Assets/sadFace.png" type="Texture" id=4]
+[ext_resource path="res://Assets/astro.png" type="Texture" id=5]
+[ext_resource path="res://Assets/spiral.png" type="Texture" id=6]
+[ext_resource path="res://Assets/eye.png" type="Texture" id=7]
+[ext_resource path="res://Assets/PinClipart.com_angry-eye-clip-art_3276935.png" type="Texture" id=8]
+[ext_resource path="res://Assets/PinClipart.com_yoda-clip-art_601544.png" type="Texture" id=9]
+[ext_resource path="res://Assets/teddy.png" type="Texture" id=10]
+[ext_resource path="res://Assets/spiralwow.png" type="Texture" id=11]
+[ext_resource path="res://Assets/turtle.png" type="Texture" id=12]
+[ext_resource path="res://Scenes/ScrollableChoices.gd" type="Script" id=13]
+[ext_resource path="res://Assets/A.Casual.Handwritten.Pen.Noncommercial.ttf" type="DynamicFontData" id=14]
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+extra_spacing_char = 1
+font_data = ExtResource( 14 )
+
+[node name="ScrollableChoices" type="ScrollContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_clip_content = false
+mouse_filter = 1
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+margin_right = 738.0
+margin_bottom = 6096.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer"]
+margin_left = 369.0
+margin_right = 369.0
+margin_bottom = 6096.0
+mouse_filter = 2
+custom_constants/margin_top = 1548
+custom_constants/margin_bottom = 1548
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/MarginContainer"]
+margin_top = 1548.0
+margin_bottom = 4548.0
+mouse_filter = 2
+custom_constants/separation = 300
+
+[node name="smileyFace" type="Control" parent="CenterContainer/MarginContainer/VBoxContainer"]
+mouse_filter = 1
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/MarginContainer/VBoxContainer/smileyFace"]
+margin_left = -80.0
+margin_top = -80.0
+margin_right = 80.0
+margin_bottom = 80.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="CenterContainer/MarginContainer/VBoxContainer/smileyFace"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = -155.0
+margin_top = -77.0
+margin_right = 287.0
+margin_bottom = 95.0
+rect_scale = Vector2( 0.6981, 0.930548 )
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer/smileyFace"]
+margin_left = -19.0
+margin_top = 78.0
+margin_right = 35.0
+margin_bottom = 138.0
+rect_scale = Vector2( 0.67, 0.67 )
+custom_fonts/font = SubResource( 1 )
+text = "75"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer/smileyFace"]
+visible = false
+margin_left = -215.0
+margin_top = -20.0
+margin_right = -70.0
+margin_bottom = 40.0
+rect_scale = Vector2( 0.67, 0.67 )
+custom_fonts/font = SubResource( 1 )
+text = "Selected"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sadFace" type="Control" parent="CenterContainer/MarginContainer/VBoxContainer"]
+margin_top = 300.0
+margin_bottom = 300.0
+mouse_filter = 1
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/MarginContainer/VBoxContainer/sadFace"]
+margin_left = -80.0
+margin_top = -80.0
+margin_right = 80.0
+margin_bottom = 80.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="CenterContainer/MarginContainer/VBoxContainer/sadFace"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = -80.0
+margin_top = -80.0
+margin_right = 80.0
+margin_bottom = 80.0
+texture = ExtResource( 4 )
+expand = true
+
+[node name="Label" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer/sadFace"]
+margin_left = -19.0
+margin_top = 78.0
+margin_right = 35.0
+margin_bottom = 138.0
+rect_scale = Vector2( 0.67, 0.67 )
+custom_fonts/font = SubResource( 1 )
+text = "75"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer/sadFace"]
+visible = false
+margin_left = -215.0
+margin_top = -20.0
+margin_right = -161.0
+margin_bottom = 40.0
+rect_scale = Vector2( 0.67, 0.67 )
+custom_fonts/font = SubResource( 1 )
+text = "Selected"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="astro" type="Control" parent="CenterContainer/MarginContainer/VBoxContainer"]
+margin_top = 600.0
+margin_bottom = 600.0
+mouse_filter = 1
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/MarginContainer/VBoxContainer/astro"]
+margin_left = -80.0
+margin_top = -80.0
+margin_right = 80.0
+margin_bottom = 80.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="CenterContainer/MarginContainer/VBoxContainer/astro"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = -63.0001
+margin_top = -44.4736
+margin_right = 69.9999
+margin_bottom = 48.526
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer/astro"]
+margin_left = -19.0
+margin_top = 78.0
+margin_right = 35.0
+margin_bottom = 138.0
+rect_scale = Vector2( 0.67, 0.67 )
+custom_fonts/font = SubResource( 1 )
+text = "75"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer/astro"]
+visible = false
+margin_left = -215.0
+margin_top = -20.0
+margin_right = -161.0
+margin_bottom = 40.0
+rect_scale = Vector2( 0.67, 0.67 )
+custom_fonts/font = SubResource( 1 )
+text = "Selected"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="duck" type="Control" parent="CenterContainer/MarginContainer/VBoxContainer"]
+margin_top = 900.0
+margin_bottom = 900.0
+mouse_filter = 1
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/MarginContainer/VBoxContainer/duck"]
+margin_left = -80.0
+margin_top = -80.0
+margin_right = 80.0
+margin_bottom = 80.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="CenterContainer/MarginContainer/VBoxContainer/duck"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = -63.0001
+margin_top = -54.479
+margin_right = 63.9999
+margin_bottom = 61.521
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer/duck"]
+margin_left = -19.0
+margin_top = 78.0
+margin_right = 35.0
+margin_bottom = 138.0
+rect_scale = Vector2( 0.67, 0.67 )
+custom_fonts/font = SubResource( 1 )
+text = "75"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer/duck"]
+visible = false
+margin_left = -215.0
+margin_top = -20.0
+margin_right = -161.0
+margin_bottom = 40.0
+rect_scale = Vector2( 0.67, 0.67 )
+custom_fonts/font = SubResource( 1 )
+text = "Selected"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="eye" type="Control" parent="CenterContainer/MarginContainer/VBoxContainer"]
+margin_top = 1200.0
+margin_bottom = 1200.0
+mouse_filter = 1
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/MarginContainer/VBoxContainer/eye"]
+margin_left = -80.0
+margin_top = -80.0
+margin_right = 80.0
+margin_bottom = 80.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="CenterContainer/MarginContainer/VBoxContainer/eye"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = -65.0
+margin_top = -65.0
+margin_right = 68.0
+margin_bottom = 65.0
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer/eye"]
+margin_left = -19.0
+margin_top = 78.0
+margin_right = 35.0
+margin_bottom = 138.0
+rect_scale = Vector2( 0.67, 0.67 )
+custom_fonts/font = SubResource( 1 )
+text = "75"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer/eye"]
+visible = false
+margin_left = -215.0
+margin_top = -20.0
+margin_right = -161.0
+margin_bottom = 40.0
+rect_scale = Vector2( 0.67, 0.67 )
+custom_fonts/font = SubResource( 1 )
+text = "Selected"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="angry" type="Control" parent="CenterContainer/MarginContainer/VBoxContainer"]
+margin_top = 1500.0
+margin_bottom = 1500.0
+mouse_filter = 1
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/MarginContainer/VBoxContainer/angry"]
+margin_left = -80.0
+margin_top = -80.0
+margin_right = 80.0
+margin_bottom = 80.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="CenterContainer/MarginContainer/VBoxContainer/angry"]
+margin_left = -63.0001
+margin_top = -50.7075
+margin_right = 63.9999
+margin_bottom = 36.2925
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer/angry"]
+margin_left = -19.0
+margin_top = 78.0
+margin_right = 35.0
+margin_bottom = 138.0
+rect_scale = Vector2( 0.67, 0.67 )
+custom_fonts/font = SubResource( 1 )
+text = "75"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer/angry"]
+visible = false
+margin_left = -215.0
+margin_top = -20.0
+margin_right = -161.0
+margin_bottom = 40.0
+rect_scale = Vector2( 0.67, 0.67 )
+custom_fonts/font = SubResource( 1 )
+text = "Selected"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="fackaf" type="Control" parent="CenterContainer/MarginContainer/VBoxContainer"]
+margin_top = 1800.0
+margin_bottom = 1800.0
+mouse_filter = 1
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/MarginContainer/VBoxContainer/fackaf"]
+margin_left = -80.0
+margin_top = -80.0
+margin_right = 80.0
+margin_bottom = 80.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="CenterContainer/MarginContainer/VBoxContainer/fackaf"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = -37.905
+margin_top = -55.9502
+margin_right = 52.095
+margin_bottom = 53.0498
+texture = ExtResource( 9 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer/fackaf"]
+margin_left = -19.0
+margin_top = 78.0
+margin_right = 35.0
+margin_bottom = 138.0
+rect_scale = Vector2( 0.67, 0.67 )
+custom_fonts/font = SubResource( 1 )
+text = "75"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer/fackaf"]
+visible = false
+margin_left = -215.0
+margin_top = -20.0
+margin_right = -161.0
+margin_bottom = 40.0
+rect_scale = Vector2( 0.67, 0.67 )
+custom_fonts/font = SubResource( 1 )
+text = "Selected"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="spiral" type="Control" parent="CenterContainer/MarginContainer/VBoxContainer"]
+margin_top = 2100.0
+margin_bottom = 2100.0
+mouse_filter = 1
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/MarginContainer/VBoxContainer/spiral"]
+margin_left = -80.0
+margin_top = -80.0
+margin_right = 80.0
+margin_bottom = 80.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="CenterContainer/MarginContainer/VBoxContainer/spiral"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = -84.3475
+margin_top = -87.2449
+margin_right = 85.6525
+margin_bottom = 82.7551
+texture = ExtResource( 6 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer/spiral"]
+margin_left = -19.0
+margin_top = 78.0
+margin_right = 35.0
+margin_bottom = 138.0
+rect_scale = Vector2( 0.67, 0.67 )
+custom_fonts/font = SubResource( 1 )
+text = "75"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer/spiral"]
+visible = false
+margin_left = -215.0
+margin_top = -20.0
+margin_right = -161.0
+margin_bottom = 40.0
+rect_scale = Vector2( 0.67, 0.67 )
+custom_fonts/font = SubResource( 1 )
+text = "Selected"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="spiralWow" type="Control" parent="CenterContainer/MarginContainer/VBoxContainer"]
+margin_top = 2400.0
+margin_bottom = 2400.0
+mouse_filter = 1
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/MarginContainer/VBoxContainer/spiralWow"]
+margin_left = -80.0
+margin_top = -80.0
+margin_right = 80.0
+margin_bottom = 80.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="CenterContainer/MarginContainer/VBoxContainer/spiralWow"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = -85.3475
+margin_top = -85.0
+margin_right = 84.6525
+margin_bottom = 94.0
+texture = ExtResource( 11 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer/spiralWow"]
+margin_left = -19.0
+margin_top = 78.0
+margin_right = 35.0
+margin_bottom = 138.0
+rect_scale = Vector2( 0.67, 0.67 )
+custom_fonts/font = SubResource( 1 )
+text = "75"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer/spiralWow"]
+visible = false
+margin_left = -215.0
+margin_top = -20.0
+margin_right = -161.0
+margin_bottom = 40.0
+rect_scale = Vector2( 0.67, 0.67 )
+custom_fonts/font = SubResource( 1 )
+text = "Selected"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="teddy" type="Control" parent="CenterContainer/MarginContainer/VBoxContainer"]
+margin_top = 2700.0
+margin_bottom = 2700.0
+mouse_filter = 1
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/MarginContainer/VBoxContainer/teddy"]
+margin_left = -80.0
+margin_top = -80.0
+margin_right = 80.0
+margin_bottom = 80.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="CenterContainer/MarginContainer/VBoxContainer/teddy"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = -60.0001
+margin_top = -69.0728
+margin_right = 62.9999
+margin_bottom = 71.9272
+texture = ExtResource( 10 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer/teddy"]
+margin_left = -19.0
+margin_top = 78.0
+margin_right = 35.0
+margin_bottom = 138.0
+rect_scale = Vector2( 0.67, 0.67 )
+custom_fonts/font = SubResource( 1 )
+text = "75"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer/teddy"]
+visible = false
+margin_left = -215.0
+margin_top = -20.0
+margin_right = -161.0
+margin_bottom = 40.0
+rect_scale = Vector2( 0.67, 0.67 )
+custom_fonts/font = SubResource( 1 )
+text = "Selected"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="turtle" type="Control" parent="CenterContainer/MarginContainer/VBoxContainer"]
+margin_top = 3000.0
+margin_bottom = 3000.0
+mouse_filter = 1
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/MarginContainer/VBoxContainer/turtle"]
+margin_left = -80.0
+margin_top = -80.0
+margin_right = 80.0
+margin_bottom = 80.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="CenterContainer/MarginContainer/VBoxContainer/turtle"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = -49.0
+margin_top = -71.0
+margin_right = 53.0
+margin_bottom = 67.0
+texture = ExtResource( 12 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer/turtle"]
+margin_left = -19.0
+margin_top = 78.0
+margin_right = 35.0
+margin_bottom = 138.0
+rect_scale = Vector2( 0.67, 0.67 )
+custom_fonts/font = SubResource( 1 )
+text = "75"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer/turtle"]
+visible = false
+margin_left = -215.0
+margin_top = -20.0
+margin_right = -161.0
+margin_bottom = 40.0
+rect_scale = Vector2( 0.67, 0.67 )
+custom_fonts/font = SubResource( 1 )
+text = "Selected"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="gui_input" from="." to="." method="_on_ScrollableChoices_gui_input"]

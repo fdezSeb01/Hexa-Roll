@@ -1,0 +1,148 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Scenes/PlayHard.gd" type="Script" id=1]
+[ext_resource path="res://Assets/bensoundmemories.ogg" type="AudioStream" id=2]
+[ext_resource path="res://Scenes/endMenu2.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Scores.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/lilmenu2.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/CoinBar.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Assets/background.png" type="Texture" id=7]
+[ext_resource path="res://Scenes/Hexagon.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/GameButtons.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/SettingsMenu.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Balls.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Assets/A.Casual.Handwritten.Pen.Noncommercial.ttf" type="DynamicFontData" id=12]
+
+[sub_resource type="DynamicFont" id=1]
+size = 10
+font_data = ExtResource( 12 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "ShowMessage"
+length = 2.0
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("MessageLabel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.15, 1.3, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("MessageLabel:custom_fonts/font:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.15, 1.6, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 10, 60, 60, 10 ]
+}
+
+[node name="PlayHard" type="Node2D"]
+script = ExtResource( 1 )
+Ballscene = ExtResource( 11 )
+
+[node name="Background" type="TextureRect" parent="."]
+modulate = Color( 1, 0.231373, 0.231373, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 750.0
+margin_bottom = 1548.0
+texture = ExtResource( 7 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hexagon" parent="." instance=ExtResource( 8 )]
+position = Vector2( 375, 774 )
+
+[node name="GameButtons" parent="." instance=ExtResource( 9 )]
+
+[node name="CoinBar" parent="." instance=ExtResource( 6 )]
+margin_left = 595.5
+margin_top = 130.0
+margin_right = 595.5
+margin_bottom = 130.0
+rect_rotation = -90.0
+
+[node name="PositionUp" type="Position2D" parent="."]
+position = Vector2( 375, -33 )
+rotation = -1.5708
+
+[node name="PositionDown" type="Position2D" parent="."]
+position = Vector2( 375, 1581 )
+rotation = -1.5708
+
+[node name="BallTimer" type="Timer" parent="."]
+wait_time = 4.5
+autostart = true
+
+[node name="Scores" parent="." instance=ExtResource( 4 )]
+
+[node name="lilmenu2" parent="." instance=ExtResource( 5 )]
+
+[node name="endMenu2" parent="." instance=ExtResource( 3 )]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+
+[node name="SettingsMenu" parent="." instance=ExtResource( 10 )]
+
+[node name="RotationDirectionTimer" type="Timer" parent="."]
+wait_time = 25.0
+autostart = true
+
+[node name="MessageLabel" type="Label" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 186.0
+margin_top = 397.015
+margin_right = 564.0
+margin_bottom = 457.015
+custom_fonts/font = SubResource( 1 )
+text = "Rotate the other way!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/ShowMessage = SubResource( 2 )
+[connection signal="changeHexagonDirection" from="." to="Hexagon" method="_on_PlayHard_changeHexagonDirection"]
+[connection signal="pointUp" from="." to="Scores" method="_on_PlayHard_pointUp"]
+[connection signal="collisionOnCenter" from="Hexagon" to="CoinBar" method="_on_Hexagon_collisionOnCenter"]
+[connection signal="collisionOnCenter" from="Hexagon" to="." method="_on_Hexagon_collisionOnCenter"]
+[connection signal="pointCollision" from="Hexagon" to="CoinBar" method="_on_Hexagon_pointCollision"]
+[connection signal="pointCollision" from="Hexagon" to="." method="_on_Hexagon_pointCollision"]
+[connection signal="power" from="Hexagon" to="CoinBar" method="_on_Hexagon_power"]
+[connection signal="power" from="Hexagon" to="." method="_on_Hexagon_power"]
+[connection signal="tap" from="Hexagon" to="CoinBar" method="_on_Hexagon_tap"]
+[connection signal="pause" from="GameButtons" to="CoinBar" method="_on_GameButtons_pause"]
+[connection signal="pause" from="GameButtons" to="Hexagon" method="_on_GameButtons_pause"]
+[connection signal="pause" from="GameButtons" to="." method="_on_GameButtons_pause"]
+[connection signal="CoinYay" from="CoinBar" to="." method="_on_CoinBar_CoinYay"]
+[connection signal="death" from="CoinBar" to="Hexagon" method="_on_death"]
+[connection signal="death" from="CoinBar" to="." method="_on_death"]
+[connection signal="death" from="CoinBar" to="endMenu2" method="_on_death"]
+[connection signal="timeout" from="BallTimer" to="." method="_on_BallTimer_timeout"]
+[connection signal="continuee" from="lilmenu2" to="CoinBar" method="_on_lilmenu2_continuee"]
+[connection signal="continuee" from="lilmenu2" to="Hexagon" method="_on_lilmenu2_continuee"]
+[connection signal="continuee" from="lilmenu2" to="." method="_on_lilmenu2_continuee"]
+[connection signal="home" from="lilmenu2" to="." method="_on_endMenu2_home"]
+[connection signal="settings" from="lilmenu2" to="." method="_on_lilmenu2_settings"]
+[connection signal="home" from="endMenu2" to="Hexagon" method="_on_endMenu2_home"]
+[connection signal="home" from="endMenu2" to="." method="_on_endMenu2_home"]
+[connection signal="SoundOff" from="SettingsMenu" to="." method="_on_SettingsMenu_SoundOff"]
+[connection signal="SoundOn" from="SettingsMenu" to="." method="_on_SettingsMenu_SoundOn"]
+[connection signal="timeout" from="RotationDirectionTimer" to="." method="_on_RotationDirectionTimer_timeout"]
+
+[editable path="Scores"]

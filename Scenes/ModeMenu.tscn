@@ -1,0 +1,337 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Scenes/ModeMenu.gd" type="Script" id=1]
+[ext_resource path="res://Assets/lilmenu2.png" type="Texture" id=2]
+[ext_resource path="res://Assets/A.Casual.Handwritten.Pen.Noncommercial.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Assets/backw.png" type="Texture" id=4]
+[ext_resource path="res://Assets/backw2.png" type="Texture" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 120
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 120
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 120
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 120
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 120
+font_data = ExtResource( 3 )
+
+[sub_resource type="Animation" id=6]
+resource_name = "In"
+tracks/0/type = "value"
+tracks/0/path = NodePath("TextureRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.862745 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Modes:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Store/Label:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Challenges/Label:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Extreme/Label:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Hard/Label:self_modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("backButton:self_modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/7/type = "method"
+tracks/7/path = NodePath(".")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "Visibility"
+} ]
+}
+
+[sub_resource type="Animation" id=7]
+tracks/0/type = "value"
+tracks/0/path = NodePath("TextureRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.862745 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Modes:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Store/Label:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Challenges/Label:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Extreme/Label:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Hard/Label:self_modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/6/type = "method"
+tracks/6/path = NodePath(".")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "Visibility"
+} ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("backButton:self_modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[node name="ModeMenu" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+self_modulate = Color( 1, 1, 1, 0.784314 )
+margin_right = 750.0
+margin_bottom = 1570.0
+texture = ExtResource( 2 )
+stretch_mode = 1
+
+[node name="Modes" type="Label" parent="."]
+visible = false
+margin_left = 249.0
+margin_top = 180.0
+margin_right = 501.0
+margin_bottom = 265.0
+custom_fonts/font = SubResource( 1 )
+text = "Modes:"
+
+[node name="Store" type="TextureButton" parent="."]
+visible = false
+margin_left = 280.0
+margin_top = 1030.0
+margin_right = 461.0
+margin_bottom = 1115.0
+
+[node name="Label" type="Label" parent="Store"]
+margin_right = 173.0
+margin_bottom = 85.0
+custom_fonts/font = SubResource( 2 )
+text = "Store"
+align = 1
+valign = 1
+
+[node name="Challenges" type="TextureButton" parent="."]
+visible = false
+margin_left = 190.0
+margin_top = 340.0
+margin_right = 550.0
+margin_bottom = 435.0
+disabled = true
+
+[node name="Label" type="Label" parent="Challenges"]
+modulate = Color( 0.529412, 0.529412, 0.529412, 1 )
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 183.0
+margin_bottom = 95.0
+custom_fonts/font = SubResource( 3 )
+text = "Challenges"
+align = 1
+valign = 1
+
+[node name="Extreme" type="TextureButton" parent="."]
+visible = false
+margin_left = 240.0
+margin_top = 650.0
+margin_right = 516.0
+margin_bottom = 735.0
+disabled = true
+
+[node name="Label" type="Label" parent="Extreme"]
+modulate = Color( 0.529412, 0.529412, 0.529412, 1 )
+margin_right = 40.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 4 )
+text = "Extreme"
+align = 1
+valign = 1
+
+[node name="Hard" type="TextureButton" parent="."]
+visible = false
+margin_left = 280.0
+margin_top = 500.0
+margin_right = 450.0
+margin_bottom = 590.0
+
+[node name="Label" type="Label" parent="Hard"]
+margin_right = 40.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 5 )
+text = "Hard"
+align = 1
+valign = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/In = SubResource( 6 )
+anims/Out = SubResource( 7 )
+
+[node name="backButton" type="TextureButton" parent="."]
+visible = false
+margin_left = 70.0001
+margin_top = 1317.0
+margin_right = 582.0
+margin_bottom = 1829.0
+rect_scale = Vector2( 0.2, 0.2 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+[connection signal="button_down" from="Store" to="." method="_on_Store_button_down"]
+[connection signal="button_up" from="Store" to="." method="_on_Store_button_up"]
+[connection signal="button_down" from="Challenges" to="." method="_on_Challenges_button_down"]
+[connection signal="button_up" from="Challenges" to="." method="_on_Challenges_button_up"]
+[connection signal="button_down" from="Extreme" to="." method="_on_Extreme_button_down"]
+[connection signal="button_up" from="Extreme" to="." method="_on_Extreme_button_up"]
+[connection signal="button_down" from="Hard" to="." method="_on_Hard_button_down"]
+[connection signal="button_up" from="Hard" to="." method="_on_Hard_button_up"]
+[connection signal="pressed" from="backButton" to="." method="_on_backButton_pressed"]

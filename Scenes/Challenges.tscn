@@ -1,0 +1,491 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://Assets/lilmenu2.png" type="Texture" id=1]
+[ext_resource path="res://Assets/A.Casual.Handwritten.Pen.Noncommercial.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Scenes/Challenges.gd" type="Script" id=3]
+[ext_resource path="res://Assets/backw.png" type="Texture" id=4]
+[ext_resource path="res://Assets/backw2.png" type="Texture" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 150
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 100
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 100
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 100
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 100
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 100
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 100
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 100
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 100
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 100
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 100
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=12]
+size = 100
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=13]
+size = 100
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=14]
+size = 100
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=15]
+size = 100
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=16]
+size = 100
+font_data = ExtResource( 2 )
+
+[node name="Challenges" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="BackGround" type="TextureRect" parent="."]
+margin_right = 750.0
+margin_bottom = 1548.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 157.0
+margin_top = 30.0
+margin_right = 593.0
+margin_bottom = 180.0
+custom_fonts/font = SubResource( 1 )
+text = "Challenges"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="."]
+margin_top = 5.0
+margin_bottom = 5.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton1" type="TextureButton" parent="Control"]
+margin_left = 127.0
+margin_top = 198.0
+margin_right = 247.0
+margin_bottom = 318.0
+disabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control/TextureButton1"]
+modulate = Color( 0.529412, 0.529412, 0.529412, 1 )
+margin_left = 40.0
+margin_right = 80.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 2 )
+text = "I"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton2" type="TextureButton" parent="Control"]
+margin_left = 314.0
+margin_top = 198.0
+margin_right = 434.0
+margin_bottom = 318.0
+disabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control/TextureButton2"]
+modulate = Color( 0.529412, 0.529412, 0.529412, 1 )
+margin_left = 40.0
+margin_right = 80.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 3 )
+text = "II"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton3" type="TextureButton" parent="Control"]
+margin_left = 501.0
+margin_top = 198.0
+margin_right = 621.0
+margin_bottom = 318.0
+disabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control/TextureButton3"]
+modulate = Color( 0.529412, 0.529412, 0.529412, 1 )
+margin_left = 40.0
+margin_right = 80.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 4 )
+text = "III"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton4" type="TextureButton" parent="Control"]
+margin_left = 127.0
+margin_top = 456.0
+margin_right = 247.0
+margin_bottom = 576.0
+disabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control/TextureButton4"]
+modulate = Color( 0.529412, 0.529412, 0.529412, 1 )
+margin_left = 40.0
+margin_right = 80.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 5 )
+text = "IV"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton5" type="TextureButton" parent="Control"]
+margin_left = 314.0
+margin_top = 456.0
+margin_right = 434.0
+margin_bottom = 576.0
+disabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control/TextureButton5"]
+modulate = Color( 0.529412, 0.529412, 0.529412, 1 )
+margin_left = 40.0
+margin_right = 80.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 6 )
+text = "V"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton6" type="TextureButton" parent="Control"]
+margin_left = 501.0
+margin_top = 456.0
+margin_right = 621.0
+margin_bottom = 576.0
+disabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control/TextureButton6"]
+modulate = Color( 0.529412, 0.529412, 0.529412, 1 )
+margin_left = 40.0
+margin_right = 80.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 7 )
+text = "VI"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton7" type="TextureButton" parent="Control"]
+margin_left = 127.0
+margin_top = 714.0
+margin_right = 247.0
+margin_bottom = 834.0
+disabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control/TextureButton7"]
+modulate = Color( 0.529412, 0.529412, 0.529412, 1 )
+margin_left = 40.0
+margin_right = 111.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 8 )
+text = "VII"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton8" type="TextureButton" parent="Control"]
+margin_left = 314.0
+margin_top = 714.0
+margin_right = 434.0
+margin_bottom = 834.0
+disabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control/TextureButton8"]
+modulate = Color( 0.529412, 0.529412, 0.529412, 1 )
+margin_left = 40.0
+margin_right = 129.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 9 )
+text = "VIII"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton9" type="TextureButton" parent="Control"]
+margin_left = 501.0
+margin_top = 714.0
+margin_right = 621.0
+margin_bottom = 834.0
+disabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control/TextureButton9"]
+modulate = Color( 0.529412, 0.529412, 0.529412, 1 )
+margin_left = 40.0
+margin_right = 80.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 10 )
+text = "IX"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton10" type="TextureButton" parent="Control"]
+margin_left = 127.0
+margin_top = 972.0
+margin_right = 247.0
+margin_bottom = 1092.0
+disabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control/TextureButton10"]
+modulate = Color( 0.529412, 0.529412, 0.529412, 1 )
+margin_left = 40.0
+margin_right = 80.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 11 )
+text = "X"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton11" type="TextureButton" parent="Control"]
+margin_left = 314.0
+margin_top = 972.0
+margin_right = 434.0
+margin_bottom = 1092.0
+disabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control/TextureButton11"]
+modulate = Color( 0.529412, 0.529412, 0.529412, 1 )
+margin_left = 40.0
+margin_right = 80.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 12 )
+text = "XI"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton12" type="TextureButton" parent="Control"]
+margin_left = 501.0
+margin_top = 972.0
+margin_right = 621.0
+margin_bottom = 1092.0
+disabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control/TextureButton12"]
+modulate = Color( 0.529412, 0.529412, 0.529412, 1 )
+margin_left = 40.0
+margin_right = 80.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 13 )
+text = "XII"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton13" type="TextureButton" parent="Control"]
+margin_left = 127.0
+margin_top = 1230.0
+margin_right = 269.0
+margin_bottom = 1350.0
+disabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control/TextureButton13"]
+modulate = Color( 0.529412, 0.529412, 0.529412, 1 )
+margin_left = 40.0
+margin_right = 80.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 14 )
+text = "XIII"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton14" type="TextureButton" parent="Control"]
+margin_left = 314.0
+margin_top = 1230.0
+margin_right = 448.0
+margin_bottom = 1350.0
+disabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control/TextureButton14"]
+modulate = Color( 0.529412, 0.529412, 0.529412, 1 )
+margin_left = 40.0
+margin_right = 80.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 15 )
+text = "XIV"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton15" type="TextureButton" parent="Control"]
+margin_left = 501.0
+margin_top = 1230.0
+margin_right = 621.0
+margin_bottom = 1350.0
+disabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control/TextureButton15"]
+modulate = Color( 0.529412, 0.529412, 0.529412, 1 )
+margin_left = 40.0
+margin_right = 114.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 16 )
+text = "XV"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackButton" type="TextureButton" parent="."]
+margin_left = 55.0
+margin_top = 1400.0
+margin_right = 132.0
+margin_bottom = 1477.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_down" from="Control/TextureButton1" to="." method="_on_TextureButton1_button_down"]
+[connection signal="button_up" from="Control/TextureButton1" to="." method="_on_TextureButton1_button_up"]
+[connection signal="button_down" from="Control/TextureButton2" to="." method="_on_TextureButton2_button_down"]
+[connection signal="button_up" from="Control/TextureButton2" to="." method="_on_TextureButton2_button_up"]
+[connection signal="button_down" from="Control/TextureButton3" to="." method="_on_TextureButton3_button_down"]
+[connection signal="button_up" from="Control/TextureButton3" to="." method="_on_TextureButton3_button_up"]
+[connection signal="button_down" from="Control/TextureButton4" to="." method="_on_TextureButton4_button_down"]
+[connection signal="button_up" from="Control/TextureButton4" to="." method="_on_TextureButton4_button_up"]
+[connection signal="button_down" from="Control/TextureButton5" to="." method="_on_TextureButton5_button_down"]
+[connection signal="button_up" from="Control/TextureButton5" to="." method="_on_TextureButton5_button_up"]
+[connection signal="button_down" from="Control/TextureButton6" to="." method="_on_TextureButton6_button_down"]
+[connection signal="button_up" from="Control/TextureButton6" to="." method="_on_TextureButton6_button_up"]
+[connection signal="button_down" from="Control/TextureButton7" to="." method="_on_TextureButton7_button_down"]
+[connection signal="button_up" from="Control/TextureButton7" to="." method="_on_TextureButton7_button_up"]
+[connection signal="button_down" from="Control/TextureButton8" to="." method="_on_TextureButton8_button_down"]
+[connection signal="button_up" from="Control/TextureButton8" to="." method="_on_TextureButton8_button_up"]
+[connection signal="button_down" from="Control/TextureButton9" to="." method="_on_TextureButton9_button_down"]
+[connection signal="button_up" from="Control/TextureButton9" to="." method="_on_TextureButton9_button_up"]
+[connection signal="button_down" from="Control/TextureButton10" to="." method="_on_TextureButton10_button_down"]
+[connection signal="button_up" from="Control/TextureButton10" to="." method="_on_TextureButton10_button_up"]
+[connection signal="button_down" from="Control/TextureButton11" to="." method="_on_TextureButton11_button_down"]
+[connection signal="button_up" from="Control/TextureButton11" to="." method="_on_TextureButton11_button_up"]
+[connection signal="button_down" from="Control/TextureButton12" to="." method="_on_TextureButton12_button_down"]
+[connection signal="button_up" from="Control/TextureButton12" to="." method="_on_TextureButton12_button_up"]
+[connection signal="button_down" from="Control/TextureButton13" to="." method="_on_TextureButton13_button_down"]
+[connection signal="button_up" from="Control/TextureButton13" to="." method="_on_TextureButton13_button_up"]
+[connection signal="button_down" from="Control/TextureButton14" to="." method="_on_TextureButton14_button_down"]
+[connection signal="button_up" from="Control/TextureButton14" to="." method="_on_TextureButton14_button_up"]
+[connection signal="button_down" from="Control/TextureButton15" to="." method="_on_TextureButton15_button_down"]
+[connection signal="button_up" from="Control/TextureButton15" to="." method="_on_TextureButton15_button_up"]
+[connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]

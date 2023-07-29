@@ -1,0 +1,214 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://Scenes/Store.gd" type="Script" id=1]
+[ext_resource path="res://Assets/lilmenu2.png" type="Texture" id=2]
+[ext_resource path="res://Assets/redBall.png" type="Texture" id=3]
+[ext_resource path="res://Assets/blueBall.png" type="Texture" id=4]
+[ext_resource path="res://Assets/yellowBall.png" type="Texture" id=5]
+[ext_resource path="res://Assets/pinkBall.png" type="Texture" id=6]
+[ext_resource path="res://Assets/orangeBall.png" type="Texture" id=7]
+[ext_resource path="res://Assets/greenBall.png" type="Texture" id=8]
+[ext_resource path="res://Assets/mouth_smile_PNG27.png" type="Texture" id=9]
+[ext_resource path="res://Assets/A.Casual.Handwritten.Pen.Noncommercial.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://Assets/PinClipart.com_angry-eye-clip-art_3276935.png" type="Texture" id=11]
+[ext_resource path="res://Assets/PinClipart.com_yoda-clip-art_601544.png" type="Texture" id=12]
+[ext_resource path="res://Scenes/HowManyCoins.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Assets/backw.png" type="Texture" id=14]
+[ext_resource path="res://Assets/backw2.png" type="Texture" id=15]
+[ext_resource path="res://Assets/604a0cadf94914c7ee6c6e552e9b4487-curved-check-mark-circle-icon-by-vexels.png" type="Texture" id=16]
+[ext_resource path="res://Assets/bensound-perception (1).ogg" type="AudioStream" id=17]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "New Anim",
+"speed": 10.0
+} ]
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 50
+font_data = ExtResource( 10 )
+
+[node name="Store" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color( 0.6, 0.611765, 0.658824, 1 )
+self_modulate = Color( 1, 1, 1, 0.796078 )
+margin_right = 750.0
+margin_bottom = 1557.0
+texture = ExtResource( 2 )
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProductSmile" type="Node2D" parent="."]
+position = Vector2( 288.771, 265.777 )
+
+[node name="Smile" type="TextureButton" parent="ProductSmile"]
+margin_top = -50.0
+margin_right = 172.0
+margin_bottom = 113.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="ProductSmile/Smile"]
+visible = false
+position = Vector2( 86.0604, 63.5967 )
+scale = Vector2( 0.171687, 0.163593 )
+frames = SubResource( 1 )
+animation = "New Anim"
+playing = true
+
+[node name="Sprite" type="Sprite" parent="ProductSmile/Smile"]
+position = Vector2( 86.2836, 63.363 )
+scale = Vector2( 0.172121, 0.163574 )
+texture = ExtResource( 3 )
+
+[node name="Sprite2" type="Sprite" parent="ProductSmile/Smile"]
+position = Vector2( 86.5828, 70.9101 )
+scale = Vector2( 0.70321, 0.899271 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="ProductSmile"]
+margin_top = 77.7049
+margin_right = 166.0
+margin_bottom = 113.705
+custom_fonts/font = SubResource( 2 )
+text = "Smiley Face"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="ProductSmile"]
+margin_left = 58.7069
+margin_top = 122.174
+margin_right = 116.707
+margin_bottom = 158.174
+custom_fonts/font = SubResource( 3 )
+text = "50 "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProductAngry" type="Node2D" parent="."]
+position = Vector2( 287.185, 540.271 )
+
+[node name="Angry" type="TextureButton" parent="ProductAngry"]
+margin_top = -50.0
+margin_right = 172.0
+margin_bottom = 113.0
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="ProductAngry/Angry"]
+visible = false
+position = Vector2( 87.0555, 63.1978 )
+scale = Vector2( 0.171687, 0.163593 )
+frames = SubResource( 1 )
+animation = "New Anim"
+frame = 4
+playing = true
+
+[node name="Sprite" type="Sprite" parent="ProductAngry/Angry"]
+position = Vector2( 86.2836, 63.363 )
+scale = Vector2( 0.172121, 0.163574 )
+texture = ExtResource( 3 )
+
+[node name="Sprite2" type="Sprite" parent="ProductAngry/Angry"]
+position = Vector2( 88.1694, 59.8032 )
+scale = Vector2( 0.120807, 0.156708 )
+texture = ExtResource( 11 )
+
+[node name="Label" type="Label" parent="ProductAngry"]
+margin_left = 6.3468
+margin_top = 77.7049
+margin_right = 172.347
+margin_bottom = 113.705
+custom_fonts/font = SubResource( 2 )
+text = "Angry Face"
+
+[node name="Label2" type="Label" parent="ProductAngry"]
+margin_left = 58.7069
+margin_top = 122.174
+margin_right = 116.707
+margin_bottom = 158.174
+custom_fonts/font = SubResource( 3 )
+text = "100"
+
+[node name="ProductFuck" type="Node2D" parent="."]
+position = Vector2( 293.531, 821.113 )
+
+[node name="Fack" type="TextureButton" parent="ProductFuck"]
+margin_top = -50.0
+margin_right = 172.0
+margin_bottom = 113.0
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="ProductFuck/Fack"]
+visible = false
+position = Vector2( 86.4254, 63.198 )
+scale = Vector2( 0.171687, 0.163593 )
+frames = SubResource( 1 )
+animation = "New Anim"
+frame = 2
+playing = true
+
+[node name="Sprite" type="Sprite" parent="ProductFuck/Fack"]
+position = Vector2( 86.2836, 63.363 )
+scale = Vector2( 0.172121, 0.163574 )
+texture = ExtResource( 3 )
+
+[node name="Sprite2" type="Sprite" parent="ProductFuck/Fack"]
+position = Vector2( 88.9839, 59.8032 )
+scale = Vector2( 0.164927, 0.156708 )
+texture = ExtResource( 12 )
+
+[node name="Label" type="Label" parent="ProductFuck"]
+margin_left = 30.4431
+margin_top = 78.5194
+margin_right = 196.443
+margin_bottom = 114.519
+custom_fonts/font = SubResource( 2 )
+text = "Fack Ya"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="ProductFuck"]
+margin_left = 58.7069
+margin_top = 122.174
+margin_right = 116.707
+margin_bottom = 158.174
+custom_fonts/font = SubResource( 3 )
+text = "200"
+
+[node name="HowManyCoins" parent="." instance=ExtResource( 13 )]
+
+[node name="BackButton" type="TextureButton" parent="."]
+margin_left = 41.0207
+margin_top = 1391.74
+margin_right = 553.021
+margin_bottom = 1903.74
+rect_scale = Vector2( 0.15, 0.15 )
+texture_normal = ExtResource( 14 )
+texture_pressed = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="check" type="Sprite" parent="."]
+position = Vector2( 520, 829.489 )
+scale = Vector2( 0.102085, 0.0982803 )
+texture = ExtResource( 16 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 17 )
+[connection signal="pressed" from="ProductSmile/Smile" to="." method="_on_Smile_pressed"]
+[connection signal="pressed" from="ProductAngry/Angry" to="." method="_on_Angry_pressed"]
+[connection signal="pressed" from="ProductFuck/Fack" to="." method="_on_Fack_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]

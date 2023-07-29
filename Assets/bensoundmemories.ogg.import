@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/bensoundmemories.ogg-4ab95571ef357e97b3273f928d606ecf.oggstr"
+
+[deps]
+
+source_file="res://Assets/bensoundmemories.ogg"
+dest_files=[ "res://.import/bensoundmemories.ogg-4ab95571ef357e97b3273f928d606ecf.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

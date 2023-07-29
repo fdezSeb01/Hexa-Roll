@@ -1,0 +1,85 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Scenes/PlayChallenge.gd" type="Script" id=1]
+[ext_resource path="res://Assets/background.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Hexagon.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/CoinBar.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/GameButtons.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Scores.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/SettingsMenu.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/lilmenu2.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/endMenu2.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Balls.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Assets/bensoundmemories.ogg" type="AudioStream" id=11]
+
+[node name="PlayChallenge" type="Node2D"]
+script = ExtResource( 1 )
+Ballscene = ExtResource( 10 )
+
+[node name="Background" type="TextureRect" parent="."]
+modulate = Color( 0.172549, 0, 1, 1 )
+margin_right = 750.0
+margin_bottom = 1548.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hexagon" parent="." instance=ExtResource( 3 )]
+position = Vector2( 375, 774 )
+
+[node name="GameButtons" parent="." instance=ExtResource( 5 )]
+
+[node name="CoinBar" parent="." instance=ExtResource( 4 )]
+margin_left = 595.519
+margin_top = 129.978
+margin_right = 595.519
+margin_bottom = 129.978
+rect_rotation = -90.0
+
+[node name="PositionUp" type="Position2D" parent="."]
+position = Vector2( 375, -33 )
+
+[node name="PositionDown" type="Position2D" parent="."]
+position = Vector2( 375, 1581 )
+
+[node name="BallTimer" type="Timer" parent="."]
+wait_time = 4.5
+autostart = true
+
+[node name="Scores" parent="." instance=ExtResource( 6 )]
+
+[node name="lilmenu2" parent="." instance=ExtResource( 8 )]
+
+[node name="endMenu2" parent="." instance=ExtResource( 9 )]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+
+[node name="SettingsMenu" parent="." instance=ExtResource( 7 )]
+[connection signal="pointUp" from="." to="Scores" method="_on_PlayChallenge_pointUp"]
+[connection signal="collisionOnCenter" from="Hexagon" to="." method="_on_Hexagon_collisionOnCenter"]
+[connection signal="collisionOnCenter" from="Hexagon" to="CoinBar" method="_on_Hexagon_collisionOnCenter"]
+[connection signal="pointCollision" from="Hexagon" to="." method="_on_Hexagon_pointCollision"]
+[connection signal="pointCollision" from="Hexagon" to="CoinBar" method="_on_Hexagon_pointCollision"]
+[connection signal="tap" from="Hexagon" to="CoinBar" method="_on_Hexagon_tap"]
+[connection signal="pause" from="GameButtons" to="Hexagon" method="_on_GameButtons_pause"]
+[connection signal="pause" from="GameButtons" to="." method="_on_GameButtons_pause"]
+[connection signal="pause" from="GameButtons" to="CoinBar" method="_on_GameButtons_pause"]
+[connection signal="CoinYay" from="CoinBar" to="." method="_on_CoinBar_CoinYay"]
+[connection signal="death" from="CoinBar" to="Hexagon" method="_on_death"]
+[connection signal="death" from="CoinBar" to="endMenu2" method="_on_death"]
+[connection signal="death" from="CoinBar" to="." method="_on_death"]
+[connection signal="timeout" from="BallTimer" to="." method="_on_BallTimer_timeout"]
+[connection signal="continuee" from="lilmenu2" to="Hexagon" method="_on_lilmenu2_continuee"]
+[connection signal="continuee" from="lilmenu2" to="." method="_on_lilmenu2_continuee"]
+[connection signal="continuee" from="lilmenu2" to="CoinBar" method="_on_lilmenu2_continuee"]
+[connection signal="home" from="lilmenu2" to="." method="_on_endMenu2_home"]
+[connection signal="settings" from="lilmenu2" to="." method="_on_lilmenu2_settings"]
+[connection signal="home" from="endMenu2" to="Hexagon" method="_on_endMenu2_home"]
+[connection signal="home" from="endMenu2" to="." method="_on_endMenu2_home"]
+[connection signal="SoundOff" from="SettingsMenu" to="." method="_on_SettingsMenu_SoundOff"]
+[connection signal="SoundOn" from="SettingsMenu" to="." method="_on_SettingsMenu_SoundOn"]
+
+[editable path="Scores"]

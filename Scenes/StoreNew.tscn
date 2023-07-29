@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Assets/bensound-perception (1).ogg" type="AudioStream" id=1]
+[ext_resource path="res://Scenes/StoreNew.gd" type="Script" id=2]
+[ext_resource path="res://Assets/backw.png" type="Texture" id=3]
+[ext_resource path="res://Assets/backw2.png" type="Texture" id=4]
+[ext_resource path="res://Assets/lilmenu2.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/ScrollableChoices.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/HowManyCoins.tscn" type="PackedScene" id=7]
+
+[node name="StoreNew" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 750.0
+margin_bottom = 1548.0
+texture = ExtResource( 5 )
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollableChoices" parent="." instance=ExtResource( 6 )]
+margin_right = 750.0
+margin_bottom = 1548.0
+
+[node name="BackButton" type="TextureButton" parent="."]
+margin_left = 41.0
+margin_top = 1392.0
+margin_right = 553.0
+margin_bottom = 1904.0
+rect_scale = Vector2( 0.15, 0.15 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HowManyCoins" parent="." instance=ExtResource( 7 )]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+[connection signal="purchase" from="." to="ScrollableChoices" method="_on_StoreNew_purchase"]
+[connection signal="succesfulChoice" from="ScrollableChoices" to="." method="_on_ScrollableChoices_succesfulChoice"]
+[connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
