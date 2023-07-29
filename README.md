@@ -1,5 +1,6 @@
 # Hexa-Roll
 One tap mobile game developed in open-source game engine, Godot.
+The core mechanics of the game is to spin the hexagon and catch the balls that match the side's colors, doing so wins you coins and missing makes the coin bar go down.
 
 ### Screenshots
 
